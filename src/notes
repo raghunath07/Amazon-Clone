@@ -1,0 +1,105 @@
+npm install firebase
+npm install -g firebase-tools
+firebase login -> raghudhoni5@pwc.com/Raghu123dr$$$5
+firebase init
+Select Hosting option by space and enter to Hosting
+Use an exsting project
+Select project name
+What do u want to use as your public directory? build
+Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
+npm run build
+run npm run build every time u make changes to app in local
+firebase deploy
+https://store-clone-b2501.web.app/
+
+Below are the Build process
+==============================================================================================
+> store-clone@0.1.0 build C:\Users\rr040\Desktop\Amazon-Clone\Amazon\store-clone
+> react-scripts build
+
+Creating an optimized production build...
+Compiled with warnings.
+
+./src/App.js
+  Line 13:10:  Unexpected empty object pattern                                                                              no-empty-pattern
+  Line 33:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+./src/Header.js
+  Line 13:28:  'dispatch' is assigned a value but never used  no-unused-vars
+
+./src/CheckoutProduct.js
+  Line 7:13:   'basket' is assigned a value but never used                                                                                 no-unused-vars
+  Line 19:13:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                   jsx-a11y/alt-text
+  Line 28:25:  Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji
+
+./src/Product.js
+  Line 7:14:  'basket' is assigned a value but never used  no-unused-vars
+
+./src/Subtotal.js
+  Line 8:22:  'dispatch' is assigned a value but never used  no-unused-vars
+
+./src/Checkout.js
+  Line 8:28:  'dispatch' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  289.18 KB  build\static\js\2.7f973f66.chunk.js
+  3.36 KB    build\static\js\main.a758cf88.chunk.js
+  1.22 KB    build\static\css\main.569cb9b3.chunk.css
+  776 B      build\static\js\runtime-main.b2ed461c.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+=======================================================================================================================
+
+npm install @stripe/react-stripe-js @stripe/stripe-js
+
+create account in stripe.com 
+raghudhoni5@gmail.com/Raghu@321$$$5
+developers -> api key
+
+===================================================================================================================
+
+firebase functions
+
+firebase init
+Are you ready to proceed? -> Y 
+Select Functions from list
+What language would you like to use to write Cloud Functions? -> javascript
+Do you want to use ESLint to catch probable bugs and enforce style? -> y
+Do you want to install dependencies with npm now? -> Y
+then functions folder will be created which is backend
+
+cd functions 
+
+npm i express,cors and stripe
+
+=============================================================
+
+emulateor (local) before deployment:
+
+firebase emulators:start
+
+get an example endpoint from terminal : http://localhost:5001/store-clone-b2501/us-central1/api
+
+
+===========================================================
+
+deploy functions to firebase
+
+cd functions 
+firebase deploy --only functions
